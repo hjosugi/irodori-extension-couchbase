@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "extensionId": "irodori.couchbase",
+  "visibility": "public",
+  "version": "0.1.0",
+  "connector": {
+    "id": "couchbase.connector",
+    "engine": "couchbase",
+    "label": "Couchbase",
+    "aliases": [
+      "couchbase",
+      "Couchbase"
+    ],
+    "defaultPort": 8091,
+    "wire": "document",
+    "module": "couchbase.driver",
+    "features": [
+      "metadata"
+    ]
+  },
+  "connection": {
+    "endpoint": {
+      "modes": [
+        "hostPort",
+        "connectionString"
+      ],
+      "defaultPort": 8091,
+      "fields": [
+        {
+          "id": "host",
+          "label": "Host",
+          "type": "string",
+          "profileField": "host",
+          "required": true
+        },
+        {
+          "id": "port",
+          "label": "Port",
+          "type": "number",
+          "profileField": "port",
+          "default": 8091
+        },
+        {
+          "id": "database",
+          "label": "Database or bucket",
+          "type": "string",
+          "profileField": "database"
+        }
+      ]
+    },
+    "authMethods": [
+      "none",
+      "connectionString",
+      "userPassword",
+      "clientCertificate",
+      "ldap",
+      "saml",
+      "oidc",
+      "customDriverOptions"
+    ],
+    "tls": "optional",
+    "transports": "default",
+    "optionNamespaces": [
+      "document",
+      "couchbase"
+    ],
+    "customDriverOptions": true
+  },
+  "runtime": {
+    "driverLinked": false
+  },
+  "source": {
+    "knowledgeEngineStatus": "recognized_no_connector",
+    "adapter": null
+  }
+}
