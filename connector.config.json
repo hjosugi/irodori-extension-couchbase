@@ -10,7 +10,7 @@
       "couchbase",
       "Couchbase"
     ],
-    "defaultPort": 11210,
+    "defaultPort": 8093,
     "wire": "document",
     "module": "couchbase.driver",
     "features": [
@@ -32,7 +32,7 @@
       "defaults": {
         "engine": "couchbase",
         "wire": "document",
-        "port": 11210,
+        "port": 8093,
         "readOnly": false
       },
       "endpoint": {
@@ -40,7 +40,7 @@
           "connectionString",
           "hostPort"
         ],
-        "defaultPort": 11210,
+        "defaultPort": 8093,
         "fields": [
           {
             "id": "host",
@@ -54,7 +54,7 @@
             "label": "Port",
             "type": "number",
             "profileField": "port",
-            "default": 11210
+            "default": 8093
           },
           {
             "id": "bucket",
@@ -108,7 +108,7 @@
           "label": "Port",
           "type": "number",
           "profileField": "port",
-          "default": 11210
+          "default": 8093
         },
         {
           "id": "bucket",
@@ -394,9 +394,13 @@
       "health",
       "describe",
       "manifest",
-      "config"
+      "config",
+      "connect",
+      "query",
+      "metadata",
+      "close"
     ],
-    "driverLinked": false
+    "driverLinked": true
   },
   "source": {
     "marketplaceId": "irodori.couchbase",
@@ -501,7 +505,7 @@
     "defaults": {
       "engine": "couchbase",
       "wire": "document",
-      "port": 11210,
+      "port": 8093,
       "readOnly": false
     },
     "endpoint": {
@@ -509,7 +513,7 @@
         "connectionString",
         "hostPort"
       ],
-      "defaultPort": 11210,
+      "defaultPort": 8093,
       "fields": [
         {
           "id": "host",
@@ -523,7 +527,7 @@
           "label": "Port",
           "type": "number",
           "profileField": "port",
-          "default": 11210
+          "default": 8093
         },
         {
           "id": "bucket",
@@ -577,7 +581,7 @@
         "label": "Port",
         "type": "number",
         "profileField": "port",
-        "default": 11210
+        "default": 8093
       },
       {
         "id": "bucket",
