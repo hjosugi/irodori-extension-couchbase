@@ -11,7 +11,7 @@
       "couchbase",
       "Couchbase"
     ],
-    "defaultPort": 8091,
+    "defaultPort": 11210,
     "wire": "document",
     "module": "couchbase.driver",
     "features": [
@@ -21,10 +21,10 @@
   "connection": {
     "endpoint": {
       "modes": [
-        "hostPort",
-        "connectionString"
+        "connectionString",
+        "hostPort"
       ],
-      "defaultPort": 8091,
+      "defaultPort": 11210,
       "fields": [
         {
           "id": "host",
@@ -38,13 +38,25 @@
           "label": "Port",
           "type": "number",
           "profileField": "port",
-          "default": 8091
+          "default": 11210
         },
         {
-          "id": "database",
-          "label": "Database or bucket",
+          "id": "bucket",
+          "label": "Bucket",
           "type": "string",
           "profileField": "database"
+        },
+        {
+          "id": "scope",
+          "label": "Scope",
+          "type": "string",
+          "option": "scope"
+        },
+        {
+          "id": "collection",
+          "label": "Collection",
+          "type": "string",
+          "option": "collection"
         }
       ]
     },
